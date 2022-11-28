@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart Car</title>
+	<link rel="icon" type="image/x-icon" href="/images/smart-car.png">
+	<link rel="stylesheet" href="/css/speed.css">
+	<link rel="stylesheet" href="/css/animation.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="loader">
+		<img style="width: 25rem;" src="images/loading-87.webp" alt="">
+		<p>Smart Car V1.0</p>
+	</div>
+
+	<div class="info">
+		<div class="logo">
+			<img style="width: 4rem;" src="/images/smart-car.png" alt="barn">
+			<a class="navbar-brand" href="#">
+				Smart Car V1.0
+			</a>
+		</div>
+		<div class="cereale">
+			<h1>Control Center</h1>
+			<div class="cereale_icon">
+				<div class="cereale_grau">
+					<a href="index.html"><img src="/images/home.png" alt="grau"></a>
+					<p>Home</p>
+				</div>
+				<div class="cereale_porumb">
+					<a target="_blank" href="https://www.microlab.club/internship"><img src="/images/internship.png" alt="grau"></a>
+					<p>Apply</p>
+				</div>
+			</div>
+			<div class="cereale_icon2">
+				<div class="cereale_orz">
+					<a target="_blank" href="https://www.microlab.club/blank-1"><img src="/images/info-button.png" alt="grau"></a>
+					<p>About</p>
+				</div>
+				<div class="cereale_hrisca">
+					<a target="_blank" href="https://www.microlab.club/blank-1"><img src="/images/phone.png" alt="grau"></a>
+					<p>Contact</p>
+				</div>
+
+			</div>
+			<div class="menu">
+				<h1 style="text-align: center;">Control Menu</h1>
+				<div class="cereale_icon">
+					<div class="cereale_grau">
+						<a href="battery.html"><img src="/images/full-battery.png" alt="grau"></a>
+						<p>Battery</p>
+					</div>
+					<div class="cereale_porumb">
+						<a href="speed.html"><img src="/images/speedometer.png" alt="grau"></a>
+						<p>Speed</p>
+					</div>
+					<div class="cereale_orz">
+						<a href="gps.html"><img src="/images/gps.png" alt="grau"></a>
+						<p>GPS</p>
+					</div>
+				</div>
+				<div class="cereale_icon">
+					<div class="cereale_hrisca">
+						<a href="remote.html"><img src="/images/steering-wheel.png" alt="grau"></a>
+						<p>Remote</p>
+					</div>
+					<div class="cereale_icon3">
+						<div class="cereale_rye">
+							<a href="index.html"><img src="/images/switch.png" alt="grau"></a>
+							<p>Turn on</p>
+						</div>
+						<div class="cereale_oat">
+							<a href="index.html"><img src="/images/wheel.png" alt="grau"></a>
+							<p>Wheel</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="charts-container">
+		<div class="chart1">
+			<div>
+				<canvas id="bar-chart-horizontal" width="900" height="350"></canvas>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="charts-container2">
+		<div class="chart3">
+			<img style="width: 4rem;" src="/images/speedometer.png" alt="barn">
+			<h1>More Speed and Car Information</h1>
+			<div class="information-battery">
+				<div class="row1">
+					<p>Car Mileage : <span class="color" >12 000</span> KM</p>
+					<p>Car Model : <span class="color" >AA23-01</span></p>
+				</div>
+					<div class="row2">
+						<p>Avarage Speed : <span class="color" >40.5</span> km/h</p>
+						<p>Motor Type : <span class="color" >Electric</span></p>
+					</div>
+			</div>
+		</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ Script pentru diagramele cu ajutorul bibliotecii Chart.js
+ -->
+
+		<script>
+			
+new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'bar',
+    data: {
+      labels: ["Max Speed(km/h)", "Drive Duration(minutes)", "Distance(km)"],
+      datasets: [
+        {
+          label: "Speed and Car Information",
+          backgroundColor: [
+						  '#007CC7',
+							'#4DA8DA',
+							'#203647',],
+          data: [70,160,120]
+        }
+      ]
+    },
+    options: {
+			indexAxis: 'y',
+      legend: { display: false },
+    }
+});
+
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"></script>
+			<script src="/js/preloader.js"></script>
+</body>
+
+</html>
